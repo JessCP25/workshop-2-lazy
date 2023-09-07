@@ -36,52 +36,51 @@
         <p
           class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
         >
-          Snowpack
+          PLATZI MANIPULACIÓN DOM
         </p>
         <h3
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >
-          Tailwind template
+          Lazy Loading
         </h3>
         <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
-          Use this template to build awesome websites using Snowpack and
-          Tailwind. It also includes Prettier and automatic publish to GitHub
-          pages using GitHub Actions. Learn more:
+          Plugin en vanilla JavaScript para cargar imágenes con lazy load.
         </p>
-        <ul
-          class="text-xl leading-7 sm:flex justify-around sm:max-w-2xl sm:mx-auto mt-10"
-        >
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a href="https://snowpack.dev" target="_blank">snowpack.dev</a>
-          </li>
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a href="https://tailwindcss.com" target="_blank"
-              >tailwindcss.com</a
-            >
-          </li>
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a
-              href="https://docs.github.com/en/free-pro-team@latest/actions"
-              target="_blank"
-              >GitHub Actions</a
-            >
-          </li>
-        </ul>
-        <p class="mt-14 text-xl leading-7 text-gray-500">Start using it:</p>
-        <div class="my-5 bg-gray-800 p-5 text-white">
-          <code>
-            npx create-snowpack-app my-app --template snowpack-template-tailwind
-          </code>
+        <p>✨✨✨</p>
+        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+          Las imágenes agregadas no se descargarán hasta que sean visibles en la pantalla.
+        </p>
+        <p>✨✨✨</p>
+        <p class="mt-4 max-w-2xl text-md leading-7 text-gray-500 mx-auto">
+          Agrega una nueva imagen al final de la lista.
+        </p>
+        <button class="block mx-auto bg-purple-600 text-white py-3 px-7 rounded-lg font-bold mt-4">Agregar Imagen</button>
+        <button id="clean" class="bg-white text-purple-600 py-3 px-12 rounded-lg font-bold mt-4 border-2 border-purple-600">Limpiar</button>
+        <div id="images">
+          <!-- <div class="p-4">
+            <img width="320" src="https://randomfox.ca/images/2.jpg" alt="" class="mx-auto">
+          </div>
+          <div class="p-4">
+            <img width="320" src="https://randomfox.ca/images/4.jpg" alt="" class="mx-auto">
+          </div>
+          <div class="p-4">
+            <img width="320" src="https://randomfox.ca/images/6.jpg" alt="" class="mx-auto">
+          </div> -->
         </div>
-        <p class="mt-16 text-xl leading-7 text-gray-500 underline">
-          <a href="https://github.com/jonalvarezz/snowpack-template-tailwind"
-            >See on GitHub</a
-          >
-        </p>
       </div>
     </div>
 
     <!-- Add more scripts here -->
+    <script>
+      let appendedImages = 0;
+      let loadedImages = 0;
+
+      const printLog = ()=>{
+        console.log(`⚪ Se han agregado ${appendedImages} imágenes`);
+        console.log(`🟣 Se han cargado ${loadedImages} imágenes`);
+        console.log("---------------------------------------");
+      }
+    </script>
     <script type="module" src="%PUBLIC_URL%/_dist_/index.js"></script>
   </body>
 </html>
